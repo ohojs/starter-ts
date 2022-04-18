@@ -1,18 +1,29 @@
 {
   "name": "[name]",
   "version": "0.0.0",
-  "packageManager": "pnpm@^6",
   "description": "",
+  "scripts": {
+    "commit": "git-cz",
+    "prepare": "husky install",
+    "build": "rimraf dist && unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "prepublishOnly": "nr build",
+    "release": "bumpp --commit --push --tag && pnpm publish",
+    "start": "esno src/index.ts",
+    "test": "vitest",
+    "check:type": "tsc --noEmit"
+  },
   "keywords": [],
-  "homepage": "https://github.com/BuptStEve/[name]#readme",
+  "homepage": "https://github.com/ohojs/[name]#readme",
   "bugs": {
-    "url": "https://github.com/BuptStEve/[name]/issues"
+    "url": "https://github.com/ohojs/[name]/issues"
   },
   "license": "MIT",
   "author": "StEve YoUng <2747745470@qq.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BuptStEve/[name].git"
+    "url": "git+https://github.com/ohojs/[name].git"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -36,18 +47,6 @@
     "dist"
   ],
   "sideEffects": false,
-  "scripts": {
-    "commit": "git-cz",
-    "prepare": "husky install",
-    "build": "rimraf dist && unbuild",
-    "dev": "unbuild --stub",
-    "lint": "eslint .",
-    "prepublishOnly": "nr build",
-    "release": "bumpp --commit --push --tag && pnpm publish",
-    "start": "esno src/index.ts",
-    "test": "vitest",
-    "check:type": "tsc --noEmit"
-  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.20.6",
     "@antfu/ni": "^0.14.0",
@@ -78,5 +77,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "packageManager": "pnpm@^6"
 }
