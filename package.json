@@ -1,24 +1,9 @@
 {
   "name": "@ohojs/[name]",
   "version": "0.0.0",
+  "packageManager": "pnpm@^6",
   "description": "",
-  "scripts": {
-    "commit": "git-cz",
-    "prepare": "husky install",
-    "build": "rimraf dist && unbuild",
-    "dev": "unbuild --stub",
-    "lint": "eslint .",
-    "prepublishOnly": "nr build",
-    "release": "HUSKY=0 bumpp --commit 'chore: v%s' --push --tag && pnpm publish",
-    "start": "esno src/index.ts",
-    "test": "vitest",
-    "check:type": "tsc --noEmit"
-  },
   "keywords": [],
-  "homepage": "https://github.com/ohojs/[name]#readme",
-  "bugs": {
-    "url": "https://github.com/ohojs/[name]/issues"
-  },
   "license": "MIT",
   "author": "StEve YoUng <2747745470@qq.com>",
   "repository": {
@@ -35,6 +20,27 @@
       "types": "./dist/index.d.ts"
     }
   },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "commit": "git-cz",
+    "prepare": "husky install",
+    "build": "rimraf dist && unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "lint:fix": "nr lint --fix",
+    "prepublishOnly": "nr build",
+    "release": "HUSKY=0 bumpp --commit 'chore: v%s' --push --tag && pnpm publish",
+    "start": "esno src/index.ts",
+    "test": "vitest",
+    "check:type": "tsc --noEmit"
+  },
+  "homepage": "https://github.com/ohojs/[name]#readme",
+  "bugs": {
+    "url": "https://github.com/ohojs/[name]/issues"
+  },
   "typesVersions": {
     "*": {
       "*": [
@@ -43,10 +49,6 @@
       ]
     }
   },
-  "files": [
-    "dist"
-  ],
-  "sideEffects": false,
   "devDependencies": {
     "@antfu/eslint-config": "^0.20.6",
     "@antfu/ni": "^0.14.0",
@@ -69,7 +71,7 @@
     "vitest": "^0.9.3"
   },
   "lint-staged": {
-    "{src,test}/**/*.{js,ts}": [
+    "**/*.{js,ts,json,md}": [
       "eslint --fix"
     ]
   },
@@ -78,7 +80,6 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "packageManager": "pnpm@^6",
   "publishConfig": {
     "access": "public"
   }
