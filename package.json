@@ -4,17 +4,16 @@
   "packageManager": "pnpm@6.32.3",
   "description": "",
   "keywords": [],
-  "homepage": "https://github.com/antfu/[name]#readme",
+  "homepage": "https://github.com/BuptStEve/[name]#readme",
   "bugs": {
-    "url": "https://github.com/antfu/[name]/issues"
+    "url": "https://github.com/BuptStEve/[name]/issues"
   },
   "license": "MIT",
-  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "author": "StEve YoUng <2747745470@qq.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antfu/[name].git"
+    "url": "git+https://github.com/BuptStEve/[name].git"
   },
-  "funding": "https://github.com/sponsors/antfu",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
