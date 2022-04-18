@@ -1,5 +1,5 @@
 {
-  "name": "[name]",
+  "name": "@ohojs/[name]",
   "version": "0.0.0",
   "description": "",
   "scripts": {
@@ -9,7 +9,7 @@
     "dev": "unbuild --stub",
     "lint": "eslint .",
     "prepublishOnly": "nr build",
-    "release": "bumpp --commit --push --tag && pnpm publish",
+    "release": "HUSKY=0 bumpp --commit 'chore: v%s' --push --tag && pnpm publish",
     "start": "esno src/index.ts",
     "test": "vitest",
     "check:type": "tsc --noEmit"
@@ -78,5 +78,8 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "packageManager": "pnpm@^6"
+  "packageManager": "pnpm@^6",
+  "publishConfig": {
+    "access": "public"
+  }
 }
