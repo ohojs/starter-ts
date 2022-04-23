@@ -17,7 +17,6 @@ importers:
       esno: ^0.14.1
       husky: ^7.0.4
       lint-staged: ^12.3.8
-      pnpm: ^6.32.8
       rimraf: ^3.0.2
       typescript: ^4.6.3
       unbuild: ^0.7.4
@@ -37,7 +36,6 @@ importers:
       esno: 0.14.1
       husky: 7.0.4
       lint-staged: 12.3.8
-      pnpm: 6.32.8
       rimraf: 3.0.2
       typescript: 4.6.3
       unbuild: 0.7.4
@@ -3814,12 +3812,6 @@ packages:
   /pluralize/8.0.0:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
-    dev: true
-
-  /pnpm/6.32.8:
-    resolution: {integrity: sha512-pZroJtqqZDevFpJI/PsOMLLfGeA6en6cvyI/HC7boGmT7TJy9eFInNYwMGW2enKv2Al/aamV2Zomv05TtBe7qw==}
-    engines: {node: '>=12.17'}
-    hasBin: true
     dev: true
 
   /postcss/8.4.12:

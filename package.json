@@ -1,5 +1,5 @@
 {
-  "name": "@ohojs/[name]",
+  "name": "@ohojs/pkg__name",
   "version": "0.0.0",
   "packageManager": "pnpm@^6",
   "description": "",
@@ -8,7 +8,7 @@
   "author": "StEve YoUng <2747745470@qq.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ohojs/[name].git"
+    "url": "git+https://github.com/ohojs/pkg__name.git"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -32,14 +32,14 @@
     "lint": "eslint .",
     "lint:fix": "nr lint --fix",
     "prepublishOnly": "nr build",
-    "release": "HUSKY=0 bumpp --commit 'chore: v%s' --push --tag && pnpm publish",
+    "release": "HUSKY=0 bumpp --commit 'chore: v%s' --push --tag && npm publish",
     "start": "esno src/index.ts",
     "test": "vitest",
     "check:type": "tsc --noEmit"
   },
-  "homepage": "https://github.com/ohojs/[name]#readme",
+  "homepage": "https://github.com/ohojs/pkg__name#readme",
   "bugs": {
-    "url": "https://github.com/ohojs/[name]/issues"
+    "url": "https://github.com/ohojs/pkg__name/issues"
   },
   "typesVersions": {
     "*": {
@@ -63,7 +63,6 @@
     "esno": "^0.14.1",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.8",
-    "pnpm": "^6.32.8",
     "rimraf": "^3.0.2",
     "typescript": "^4.6.3",
     "unbuild": "^0.7.4",
